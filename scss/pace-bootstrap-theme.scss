@@ -1,0 +1,99 @@
+// |--------------------------------------------------------------------------
+// | Pace bootstrap theme
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .pace
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+@import "variables";
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@import "mixins";
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.pace {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $pace-zindex;
+
+  width: 100%;
+  
+  pointer-events: none;
+  user-select: none;
+
+  transform: translate3d(0, -50px, 0);
+  transition: transform $pace-transition-time ease-in-out;
+
+  &.pace-active {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .pace-progress {
+    display: block;
+    
+    position: fixed;
+    top: 0;
+    right: 100%;
+
+    width: 100%;
+    height: $pace-height;
+    
+    background: $pace-background-color;
+
+    pointer-events: none;
+  }
+}
+
+.pace-inactive {
+  display: none;
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}
