@@ -1,4 +1,4 @@
-$pace-background-color: $brand-primary;
-$pace-zindex: $zindex-modal;
-$pace-height: 2px;
-$pace-transition-time: $transition-time-long;
+$pace-background-color: $brand-primary !default;
+$pace-zindex: $zindex-modal !default;
+$pace-height: 2px !default;
+$pace-transition-time: $transition-time-long !default;
